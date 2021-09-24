@@ -3,8 +3,8 @@ import Message, {MessageTypeProps} from "./Message";
 
 const messageData:MessageTypeProps = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-    name: 'Some Name',
-    message: 'some text',
+    name: 'Ольга',
+    message: 'Моя первая домашка...',
     time: '22:00',
 }
 

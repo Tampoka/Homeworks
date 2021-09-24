@@ -1,4 +1,5 @@
 import React from 'react'
+import s from './Message.module.css'
 
 export type MessageTypeProps={
     avatar:string
@@ -8,14 +9,14 @@ export type MessageTypeProps={
 }
 function Message(props:MessageTypeProps) {
     return (
-        <div>
-            <div>
+        <div className={s.message}>
+            <div className={s.avatar}>
                 <img src={props.avatar} alt="User Avatar"/>
             </div>
-            <div>
-                <span>{props.name}</span>
-                <p>{props.message}</p>
-                <span>{props.time}</span>
+            <div className={s.user_message}>
+                <span className={s.user_name}>{props.name}</span>
+                <p className={s.user_text}>{props.message}</p>
+                <span className={s.time_stamp}>{props.time}</span>
             </div>
         </div>
     )
