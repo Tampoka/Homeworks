@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Affairs from './Affairs'
+import SenseiAffairs from './SenseiAffairs'
 
 // types
 export type AffairPriorityType = "high"|"middle"|"low"
@@ -44,7 +44,7 @@ function HW2() {
             homeworks 2
 
             {/*should work (должно работать)*/}
-            <Affairs
+            <SenseiAffairs
                 data={filteredAffairs}
                 setFilter={setFilter}
                 deleteAffairCallback={deleteAffairCallback}

@@ -1,40 +1,48 @@
 import React, {Dispatch, SetStateAction} from 'react'
-import Affair from './Affair'
+import SenseiAffair from './SenseiAffair'
 import {AffairType, FilterType} from './HW2'
-import s from './Affairs.module.css'
+import s from './SenseiAffairs.module.css'
 
 type AffairsPropsType = {
     data: AffairType[]
     // setFilter: (filter:FilterType)=>void
-    setFilter:Dispatch<SetStateAction<FilterType>>
-    deleteAffairCallback: (id:number)=>void
-    filter:FilterType
+    setFilter: Dispatch<SetStateAction<FilterType>>
+    deleteAffairCallback: (id: number) => void
+    filter: FilterType
 }
 
-function Affairs(props: AffairsPropsType) {
+function SenseiAffairs(props: AffairsPropsType) {
     const mappedAffairs = props.data.map((a: AffairType) => (
-        <Affair // should work
+        <SenseiAffair // should work
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
         />
     ))
 
-    const setAll = () => {props.setFilter('all')} //
-    const setHigh = () => {props.setFilter('high')}
-    const setMiddle = () => {props.setFilter('middle')}
-    const setLow = () => {props.setFilter('low')}
+    const setAll = () => {
+        props.setFilter('all')
+    } //
+    const setHigh = () => {
+        props.setFilter('high')
+    }
+    const setMiddle = () => {
+        props.setFilter('middle')
+    }
+    const setLow = () => {
+        props.setFilter('low')
+    }
 
-    const set=(e:React.MouseEvent<HTMLButtonElement,MouseEvent>)=>{
+    const set = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         props.setFilter(e.currentTarget.value as FilterType)
     }
 
-    const cnAll=s.button+' '+(props.filter==='all'?s.active:'')
-    const cnHigh=s.button+' '+(props.filter==='high'?s.active:'')
-    const cnMiddle=s.button+' '+(props.filter==='middle'?s.active:'')
-    const cnLow=s.button+' '+(props.filter==='low'?s.active:'')
-    const setClass=(filter:FilterType)=>{
-        return s.button+(props.filter===filter?' '+s.active:'')
+    const cnAll = s.button + ' ' + (props.filter === 'all' ? s.active : '')
+    const cnHigh = s.button + ' ' + (props.filter === 'high' ? s.active : '')
+    const cnMiddle = s.button + ' ' + (props.filter === 'middle' ? s.active : '')
+    const cnLow = s.button + ' ' + (props.filter === 'low' ? s.active : '')
+    const setClass = (filter: FilterType) => {
+        return s.button + (props.filter === filter ? ' ' + s.active : '')
     }
     return (
         <div>
@@ -55,4 +63,4 @@ function Affairs(props: AffairsPropsType) {
     )
 }
 
-export default Affairs
+export default SenseiAffairs
