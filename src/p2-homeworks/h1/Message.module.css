@@ -1,7 +1,7 @@
 .message {
     display: flex;
     /*align-items: center;*/
-    padding: 10px;
+    padding: 15px 15px 25px;
     background-color: springgreen;
 }
 
@@ -17,21 +17,37 @@
 }
 
 .user_message {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-left: 15px;
+    margin-left: 25px;
+    padding: 10px;
+    background-color: darkgreen;
+    border-radius: 14%;
+}
+
+.left_point{
+    width: 0;
+    height: 0;
+    border-left: 2vh solid transparent;
+    border-right: 2vh solid transparent;
+    border-top: 10vh solid darkgreen;
+    position: absolute;
+    top: 55%;
+    left: -6%;
+    transform: rotate(60deg);
 
 }
 
 .user_name {
-    color: darkslategray;
-    font-size: 18px;
+    color: #51a0a0;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .user_text {
    color: white;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
     padding: 0;
 }
