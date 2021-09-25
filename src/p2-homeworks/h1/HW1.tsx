@@ -2,7 +2,7 @@ import React from 'react'
 import Message, {MessageTypeProps} from "./Message";
 import SenseiMessage from "./SenseiMessage";
 
-const messageData:MessageTypeProps = {
+const messageData: MessageTypeProps = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
     name: 'Ольга',
     message: 'Моя первая домашка...',
@@ -11,7 +11,7 @@ const messageData:MessageTypeProps = {
 
 function HW1() {
     return (
-        <div>
+        <div style={{backgroundColor: "black"}}>
             <hr/>
             homeworks 1
 
@@ -24,10 +24,10 @@ function HW1() {
                 time={messageData.time}
             />
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeMessage/>*/}
-            <hr/>
+            {/*  <hr/>
+            для личного творчества, могу проверить
+            <AlternativeMessage/>
+            <hr/>*/}
 
             <hr/>
             <SenseiMessage
@@ -35,8 +35,9 @@ function HW1() {
                 name={messageData.name}
                 message={messageData.message}
                 time={messageData.time}/>
+            <hr/>
+
         </div>
     )
 }
-
 export default HW1

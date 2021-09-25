@@ -3,7 +3,6 @@
     /*align-items: center;*/
     padding: 15px 15px 25px;
     background-color: springgreen;
-    opacity: 60%;
 }
 
 .avatar {
@@ -25,6 +24,7 @@
     padding: 10px;
     background-color: darkgreen;
     border-radius: 6%;
+    opacity: 60%;
 }
 
 .left_point{
@@ -41,7 +41,7 @@
 }
 
 .user_name {
-    color: #51a0a0;
+    color: #52cbcb;
     font-size: 16px;
     font-weight: bold;
 }
@@ -54,8 +54,8 @@
 }
 
 .time_stamp {
-    color: darkslategray;
-    opacity: 40%;
+    color: rgba(182, 234, 189, 0.89);
+    opacity: 50%;
     font-size: 14px;
     align-self: flex-end;
 }
