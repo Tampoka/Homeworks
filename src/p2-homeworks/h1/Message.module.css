@@ -23,9 +23,8 @@
     word-wrap: break-word;
     margin-left: 25px;
     padding: 10px;
-    background-color: #788fb6;
+    background-color: rgb(147, 161, 185);
     border-radius: 6%;
-    opacity: 60%;
 }
 
 .left_point{
@@ -33,7 +32,7 @@
     height: 0;
     border-left: 2vh solid transparent;
     border-right: 2vh solid transparent;
-    border-top: 10vh solid #788fb6;
+    border-top: 10vh solid rgb(147, 161, 185);
     position: absolute;
     top: 55%;
     left: -6%;
