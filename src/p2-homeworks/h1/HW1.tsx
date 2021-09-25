@@ -8,6 +8,12 @@ const messageData: MessageTypeProps = {
     message: 'Моя первая домашка...',
     time: '22:00',
 }
+const messageData2: MessageTypeProps = {
+    avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+    name: 'Sensei',
+    message: 'Some message text',
+    time: '14:45',
+}
 
 function HW1() {
     return (
@@ -31,10 +37,10 @@ function HW1() {
 
             <hr/>
             <SenseiMessage
-                avatar={messageData.avatar}
-                name={messageData.name}
-                message={messageData.message}
-                time={messageData.time}/>
+                avatar={messageData2.avatar}
+                name={messageData2.name}
+                message={messageData2.message}
+                time={messageData2.time}/>
             <hr/>
 
         </div>
