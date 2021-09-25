@@ -1,0 +1,54 @@
+.affairsContainer {
+background-color: #ea9c5e;
+}
+.button {
+    margin: 10px;
+    width: 60px;
+
+    background: #49495b;
+    color: #99ff99;
+    outline: none;
+    border-radius: 8px;
+}
+
+.button:focus {
+    outline: #a58baf solid 1px;
+}
+
+.button:active {
+    background: #a58baf;
+}
+
+.active {
+    background: #81478c;
+}
+
+.affair {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    padding-left: 5px;
+}
+
+.high {
+    color: red;
+    border-left: 2px solid red;
+}
+
+.middle {
+    color: #d9f104;
+    border-left: 2px solid #d9f104;
+
+}
+
+.low {
+    color: #30b92d;
+    border-left: 2px solid #30b92d;
+
+}
+
+.high {
+    color: red;
+}
