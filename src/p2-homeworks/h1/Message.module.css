@@ -27,7 +27,7 @@
     border-radius: 6%;
 }
 
-.left_point{
+.left_point {
     width: 0;
     height: 0;
     border-left: 2vh solid transparent;
@@ -47,7 +47,7 @@
 }
 
 .user_text {
-   color: white;
+    color: white;
     font-size: 16px;
     margin: 0;
     padding: 0;

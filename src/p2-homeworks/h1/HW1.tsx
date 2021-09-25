@@ -46,4 +46,5 @@ function HW1() {
         </div>
     )
 }
+
 export default HW1
