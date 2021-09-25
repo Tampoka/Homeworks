@@ -3,7 +3,7 @@ import Message, {MessageTypeProps} from "./Message";
 import SenseiMessage from "./SenseiMessage";
 
 const messageData: MessageTypeProps = {
-    avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+    avatar: 'https://previews.123rf.com/images/robuart/robuart1702/robuart170202133/72279029-userpic-of-a-business-lady-woman-at-work-icon.jpg',
     name: 'Ольга',
     message: 'Моя первая домашка...',
     time: '22:00',

@@ -2,7 +2,7 @@
     display: flex;
     /*align-items: center;*/
     padding: 15px 15px 25px;
-    background-color: springgreen;
+    background-color: #e1ae89;
 }
 
 .avatar {
@@ -20,9 +20,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    word-wrap: break-word;
     margin-left: 25px;
     padding: 10px;
-    background-color: darkgreen;
+    background-color: #788fb6;
     border-radius: 6%;
     opacity: 60%;
 }
@@ -32,7 +33,7 @@
     height: 0;
     border-left: 2vh solid transparent;
     border-right: 2vh solid transparent;
-    border-top: 10vh solid darkgreen;
+    border-top: 10vh solid #788fb6;
     position: absolute;
     top: 55%;
     left: -6%;
@@ -54,8 +55,7 @@
 }
 
 .time_stamp {
-    color: rgba(182, 234, 189, 0.89);
-    opacity: 50%;
+    color: #52cbcb;
     font-size: 14px;
     align-self: flex-end;
 }
