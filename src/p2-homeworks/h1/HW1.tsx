@@ -1,5 +1,6 @@
 import React from 'react'
 import Message, {MessageTypeProps} from "./Message";
+import SenseiMessage from "./SenseiMessage";
 
 const messageData:MessageTypeProps = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
@@ -27,6 +28,13 @@ function HW1() {
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeMessage/>*/}
             <hr/>
+
+            <hr/>
+            <SenseiMessage
+                avatar={messageData.avatar}
+                name={messageData.name}
+                message={messageData.message}
+                time={messageData.time}/>
         </div>
     )
 }
