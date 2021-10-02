@@ -1,4 +1,4 @@
-import React, {ChangeEvent,useState} from 'react'
+import React, {ChangeEvent,useState,KeyboardEvent} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
 
@@ -35,11 +35,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         setName('')
     }
 
-/*    const onEnter = (e:KeyboardEvent<HTMLInputElement>) =>{
+    const onEnter = (e:KeyboardEvent<HTMLInputElement>) =>{
         if (e.key === 'Enter' && name) {
             addUser()
         }
-    }*/
+    }
     const totalUsers = users.length // need to fix
 
     return (
@@ -49,6 +49,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            onEnter={onEnter}
         />
     )
 }
