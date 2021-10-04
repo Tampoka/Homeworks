@@ -18,7 +18,6 @@ const messageData2: MessageTypeProps = {
 function HW1() {
     return (
         <div style={{backgroundColor: "black"}}>
-            <hr/>
             homeworks 1
 
             {/*should work (должно работать)*/}
@@ -35,14 +34,11 @@ function HW1() {
             <AlternativeMessage/>
             <hr/>*/}
 
-            <hr/>
             <SenseiMessage
                 avatar={messageData2.avatar}
                 name={messageData2.name}
                 message={messageData2.message}
                 time={messageData2.time}/>
-            <hr/>
-
         </div>
     )
 }
