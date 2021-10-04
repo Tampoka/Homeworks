@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import SenseiAffairs from './SenseiAffairs/SenseiAffairs'
 import Affairs from "./Affairs";
+import "../../Btn.css"
 
 // types
 export type AffairPriorityType = "high" | "middle" | "low"
