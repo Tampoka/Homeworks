@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Message, {MessageTypeProps} from "./Message";
 import SenseiMessage from "./SenseiMessage/SenseiMessage";
 
@@ -16,6 +16,9 @@ const messageData2: MessageTypeProps = {
 }
 
 function HW1() {
+    const [showExample, setShowExample]=useState<boolean>(false)
+    const togglingExample=()=>{!showExample?setShowExample(true):setShowExample(false)}
+    const buttonText=!showExample?"Show Example":"Hide Example"
     return (
         <div style={{backgroundColor: "black"}}>
             homeworks 1
@@ -33,12 +36,13 @@ function HW1() {
             для личного творчества, могу проверить
             <AlternativeMessage/>
             <hr/>*/}
-
+    <button onClick={togglingExample}>{buttonText}</button>
+            {showExample&&
             <SenseiMessage
                 avatar={messageData2.avatar}
                 name={messageData2.name}
                 message={messageData2.message}
-                time={messageData2.time}/>
+                time={messageData2.time}/>}
         </div>
     )
 }
