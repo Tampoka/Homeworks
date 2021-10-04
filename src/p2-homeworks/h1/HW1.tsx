@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Message, {MessageTypeProps} from "./Message";
 import SenseiMessage from "./SenseiMessage/SenseiMessage";
-import "./Btn.css"
+import "../../Btn.css"
 
 const messageData: MessageTypeProps = {
     avatar: 'https://previews.123rf.com/images/robuart/robuart1702/robuart170202133/72279029-userpic-of-a-business-lady-woman-at-work-icon.jpg',
@@ -19,7 +19,7 @@ const messageData2: MessageTypeProps = {
 function HW1() {
     const [showExample, setShowExample]=useState<boolean>(false)
     const togglingExample=()=>{!showExample?setShowExample(true):setShowExample(false)}
-    const buttonText=!showExample?"Show Example":"Hide Example"
+    const buttonText=!showExample?"Compare":"Hide"
     return (
         <div style={{backgroundColor: "black"}}>
             homeworks 1

@@ -3,11 +3,11 @@ import SenseiAffairs from './SenseiAffairs/SenseiAffairs'
 import Affairs from "./Affairs";
 
 // types
-export type AffairPriorityType = "high"|"middle"|"low"
+export type AffairPriorityType = "high" | "middle" | "low"
 export type AffairType = {
-    _id:number
-    name:string
-    priority:AffairPriorityType
+    _id: number
+    name: string
+    priority: AffairPriorityType
 }
 export type FilterType = 'all' | AffairPriorityType
 
@@ -21,15 +21,15 @@ const defaultAffairs: AffairType[] = [
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs:AffairType[], filter: FilterType):AffairType[] => { // need to fix any
+export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => { // need to fix any
     if (filter === 'all') return affairs
-/*    else if (filter === 'high') return affairs.filter(a => a.priority === 'high')
-    else if (filter === 'middle') return affairs.filter(a => a.priority === 'middle')
-    else if (filter === 'low') return affairs.filter(a => a.priority === 'low')*/
-    else return affairs.filter(a=>a.priority===filter)
+    /*    else if (filter === 'high') return affairs.filter(a => a.priority === 'high')
+        else if (filter === 'middle') return affairs.filter(a => a.priority === 'middle')
+        else if (filter === 'low') return affairs.filter(a => a.priority === 'low')*/
+    else return affairs.filter(a => a.priority === filter)
 }
 export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need to fix any
-    return affairs.filter(a=>a._id!==_id)
+    return affairs.filter(a => a._id !== _id)
 }
 
 function HW2() {
@@ -39,16 +39,13 @@ function HW2() {
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
+    const [showExample, setShowExample]=useState<boolean>(false)
+    const togglingExample=()=>{!showExample?setShowExample(true):setShowExample(false)}
+    const buttonText=!showExample?"Compare":"Hide"
     return (
         <div>
             homeworks 2
             {/*should work (должно работать)*/}
-            <SenseiAffairs
-                data={filteredAffairs}
-                setFilter={setFilter}
-                deleteAffairCallback={deleteAffairCallback}
-                filter={filter}
-            />
 
             <Affairs
                 data={filteredAffairs}
@@ -56,6 +53,16 @@ function HW2() {
                 deleteAffairCallback={deleteAffairCallback}
                 filter={filter}
             />
+
+            <button onClick={togglingExample} className="glowBtn">{buttonText}</button>
+
+            {showExample&&
+            <SenseiAffairs
+                data={filteredAffairs}
+                setFilter={setFilter}
+                deleteAffairCallback={deleteAffairCallback}
+                filter={filter}
+            />}
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
         </div>
