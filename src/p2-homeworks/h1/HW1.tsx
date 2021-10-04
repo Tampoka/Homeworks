@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Message, {MessageTypeProps} from "./Message";
 import SenseiMessage from "./SenseiMessage/SenseiMessage";
+import "./Btn.css"
 
 const messageData: MessageTypeProps = {
     avatar: 'https://previews.123rf.com/images/robuart/robuart1702/robuart170202133/72279029-userpic-of-a-business-lady-woman-at-work-icon.jpg',
@@ -36,7 +37,7 @@ function HW1() {
             для личного творчества, могу проверить
             <AlternativeMessage/>
             <hr/>*/}
-    <button onClick={togglingExample}>{buttonText}</button>
+    <button onClick={togglingExample}  className="glowBtn">{buttonText}</button>
             {showExample&&
             <SenseiMessage
                 avatar={messageData2.avatar}
