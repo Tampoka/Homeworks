@@ -1,6 +1,6 @@
 import React from 'react'
 import Message, {MessageTypeProps} from "./Message";
-import SenseiMessage from "./SenseiMessage";
+import SenseiMessage from "./SenseiMessage/SenseiMessage";
 
 const messageData: MessageTypeProps = {
     avatar: 'https://previews.123rf.com/images/robuart/robuart1702/robuart170202133/72279029-userpic-of-a-business-lady-woman-at-work-icon.jpg',

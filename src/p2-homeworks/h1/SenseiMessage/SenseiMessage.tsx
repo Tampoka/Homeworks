@@ -1,5 +1,5 @@
 import React from 'react'
-import {MessageTypeProps} from "./Message";
+import {MessageTypeProps} from "../Message";
 import s from "./SenseiMessage.module.css"
 
 function Message(props: MessageTypeProps) {
