@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import SenseiAffairs from './SenseiAffairs'
+import SenseiAffairs from './SenseiAffairs/SenseiAffairs'
 import Affairs from "./Affairs";
 
 // types

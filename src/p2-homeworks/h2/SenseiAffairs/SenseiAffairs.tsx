@@ -1,6 +1,6 @@
 import React, {Dispatch, SetStateAction} from 'react'
 import SenseiAffair from './SenseiAffair'
-import {AffairType, FilterType} from './HW2'
+import {AffairType, FilterType} from '../HW2'
 import s from './SenseiAffairs.module.css'
 
 type AffairsPropsType = {
