@@ -14,7 +14,7 @@ function HW3() {
     const [users, setUsers] = useState<UserType[]>([]) // need to fix any
 
     const addUserCallback = (name: string) => { // need to fix any
-        setUsers([...users, {name: name, _id: v1()}]) // need to fix
+        setUsers([...users, {name, _id: v1()}]) // need to fix
     }
 
     const [showExample, setShowExample] = useState<boolean>(false)
