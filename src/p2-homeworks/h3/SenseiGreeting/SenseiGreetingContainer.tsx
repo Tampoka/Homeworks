@@ -1,5 +1,5 @@
 import React, {ChangeEvent,useState,KeyboardEvent} from 'react'
-import Greeting from './Greeting2'
+import Greeting from './SenseiGreeting'
 import {UserType} from "../HW3";
 
 type GreetingContainerPropsType = {

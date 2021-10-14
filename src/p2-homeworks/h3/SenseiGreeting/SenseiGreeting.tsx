@@ -1,5 +1,5 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
-import s from './Greeting.module.css'
+import s from'./SenseiGreeting.module.css'
 
 type GreetingPropsType = {
     name: string // need to fix any
