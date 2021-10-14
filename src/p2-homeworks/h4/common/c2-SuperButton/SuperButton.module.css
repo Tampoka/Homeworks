@@ -1,3 +1,11 @@
+@keyframes blink {
+    0% {
+        left: -130%
+    }
+    100% {
+        left: 130%
+    }
+}
 
 .default {
     background: #003300;
