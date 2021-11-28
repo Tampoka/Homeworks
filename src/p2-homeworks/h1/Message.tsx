@@ -14,11 +14,11 @@ function Message(props: MessageTypeProps) {
             <div className={s.avatar}>
                 <img src={props.avatar} alt="User Avatar"/>
             </div>
-            <div className={s.user_message}>
+
+            <div className={s.circular}>
                 <span className={s.user_name}>{props.name}</span>
                 <p className={s.user_text}>{props.message}</p>
                 <span className={s.time_stamp}>{props.time}</span>
-                <div className={s.left_point}></div>
             </div>
         </div>
     )

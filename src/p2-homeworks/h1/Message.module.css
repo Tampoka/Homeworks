@@ -1,8 +1,9 @@
 .message {
     display: flex;
-    /*align-items: center;*/
+    align-items: baseline;
     padding: 15px 15px 25px;
     background-color: #e1ae89;
+    min-height: 150px;
 }
 
 .avatar {
@@ -14,30 +15,6 @@
 .avatar img {
     max-width: 100%;
     border-radius: 50%;
-}
-
-.user_message {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    word-wrap: break-word;
-    margin-left: 25px;
-    padding: 10px;
-    background-color: rgb(147, 161, 185);
-    border-radius: 6%;
-}
-
-.left_point {
-    width: 0;
-    height: 0;
-    border-left: 2vh solid transparent;
-    border-right: 2vh solid transparent;
-    border-top: 10vh solid rgb(147, 161, 185);
-    position: absolute;
-    top: 55%;
-    left: -6%;
-    transform: rotate(60deg);
-
 }
 
 .user_name {
@@ -57,4 +34,40 @@
     color: #52cbcb;
     font-size: 14px;
     align-self: flex-end;
+}
+
+.circular, .circular::before, .circular::after {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: rgb(147, 161, 185);
+    border-radius: 50%;
+}
+
+.circular {
+    font-family: arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 30px 30px;
+    max-width: 300px;
+    position: relative;
+}
+
+.circular::before, .circular::after {
+    content: '';
+    position: absolute;
+}
+
+.circular::before {
+    width: 20px;
+    padding: 20px;
+    right: 10px;
+    bottom: -30px;
+}
+
+.circular::after {
+    width: 10px;
+    padding: 10px;
+    right: 0;
+    bottom: -50px;
 }
