@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import SenseiAffairs from './SenseiAffairs/SenseiAffairs'
 import Affairs from "./Affairs";
 import "../../Btn.css"
+import ExampleButton from "../../common/ExampleButton/ExampleButton";
 
 // types
 export type AffairPriorityType = "high" | "middle" | "low"
@@ -40,9 +41,7 @@ function HW2() {
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
-    const [showExample, setShowExample]=useState<boolean>(false)
-    const togglingExample=()=>{!showExample?setShowExample(true):setShowExample(false)}
-    const buttonText=!showExample?"Compare":"Hide"
+
     return (
         <div>
             homeworks 2
@@ -55,15 +54,14 @@ function HW2() {
                 filter={filter}
             />
 
-            <button onClick={togglingExample} className="glowBtn">{buttonText}</button>
+            <ExampleButton componentToShowAfter={
+                <SenseiAffairs
+                    data={filteredAffairs}
+                    setFilter={setFilter}
+                    deleteAffairCallback={deleteAffairCallback}
+                    filter={filter}
+                />}/>
 
-            {showExample&&
-            <SenseiAffairs
-                data={filteredAffairs}
-                setFilter={setFilter}
-                deleteAffairCallback={deleteAffairCallback}
-                filter={filter}
-            />}
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
         </div>

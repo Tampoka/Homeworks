@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Message, {MessageTypeProps} from "./Message";
 import SenseiMessage from "./SenseiMessage/SenseiMessage";
 import "../../Btn.css"
+import ExampleButton from "../../common/ExampleButton/ExampleButton";
 
 const messageData: MessageTypeProps = {
     avatar: 'https://previews.123rf.com/images/robuart/robuart1702/robuart170202133/72279029-userpic-of-a-business-lady-woman-at-work-icon.jpg',
@@ -17,9 +18,6 @@ const messageData2: MessageTypeProps = {
 }
 
 function HW1() {
-    const [showExample, setShowExample]=useState<boolean>(false)
-    const togglingExample=()=>{!showExample?setShowExample(true):setShowExample(false)}
-    const buttonText=!showExample?"Compare":"Hide"
     return (
         <div style={{backgroundColor: "black"}}>
             homeworks 1
@@ -37,13 +35,13 @@ function HW1() {
             для личного творчества, могу проверить
             <AlternativeMessage/>
             <hr/>*/}
-    <button onClick={togglingExample}  className="glowBtn">{buttonText}</button>
-            {showExample&&
-            <SenseiMessage
-                avatar={messageData2.avatar}
-                name={messageData2.name}
-                message={messageData2.message}
-                time={messageData2.time}/>}
+            <ExampleButton componentToShowAfter={
+                <SenseiMessage
+                    avatar={messageData2.avatar}
+                    name={messageData2.name}
+                    message={messageData2.message}
+                    time={messageData2.time}/>
+            }/>
         </div>
     )
 }
