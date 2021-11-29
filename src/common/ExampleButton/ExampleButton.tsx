@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import s from '../../Btn.module.css'
+import s from '../../GlowBtn.module.css'
 
 export type ExampleButtonPropsType = {
     componentToShowAfter?:React.ReactNode

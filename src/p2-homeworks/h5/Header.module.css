@@ -40,12 +40,12 @@
     margin-left: 20px;
 }
 
-button:hover {
+.navContainer button:hover {
     background-color: #536672;
     cursor: grabbing;
 }
 
 
-button:active {
+.navContainer button:active {
     background-color: transparent;
 }

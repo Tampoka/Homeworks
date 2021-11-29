@@ -42,7 +42,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     const finalInputClassName = `${s.input} ${error?s.errorInput:s.superInput}  ${className}`// need to fix with (?:) and s.superInput
 
     return (
-        <>
+        <div className={s.inputContainer}>
             <input
                 type={'text'}
                 onChange={onChangeCallback}
@@ -52,7 +52,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
             {error && <span className={finalSpanClassName}>{error}</span>}
-        </>
+        </div>
     )
 }
 
