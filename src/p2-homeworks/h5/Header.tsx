@@ -1,19 +1,20 @@
 import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
 import {PATH} from './AppRoutes';
 import s from './Header.module.css'
-import style from '../../Btn.module.css'
+import style from '../../GlowBtn.module.css'
+import CustomLink from "./CustomLink";
 
 function Header() {
-    const [showNav, setShowNav]=useState(false)
-    const toggleShowNav=()=>setShowNav(!showNav)
-    const navClass=s.navContainer+' '+(showNav?s.visible:'')
+    const [showNav, setShowNav] = useState(false)
+    const toggleShowNav = () => setShowNav(!showNav)
+
+    const navClass = s.navContainer + ' ' + (showNav ? s.visible : '')
     return (
         <div className={s.header}>
             <div className={navClass}>
-                <Link className={style.glowBtn} to='/'>Pre-Junior</Link>
-                <Link className={style.glowBtn} to={PATH.JUNIOR}>Junior</Link>
-                <Link className={style.glowBtn} to={PATH.JUNIOR_PLUS}>Junior+</Link>
+                <CustomLink className={style.glowBtn} to='/'>Pre-Junior</CustomLink>
+                <CustomLink className={style.glowBtn} to={PATH.JUNIOR}>Junior</CustomLink>
+                <CustomLink className={style.glowBtn} to={PATH.JUNIOR_PLUS}>Junior+</CustomLink>
                 <div>
                     <button onClick={toggleShowNav}>?</button>
                 </div>
