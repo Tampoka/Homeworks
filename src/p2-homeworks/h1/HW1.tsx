@@ -19,7 +19,7 @@ const messageData2: MessageTypeProps = {
 
 function HW1() {
     return (
-        <div style={{backgroundColor: "black"}}>
+        <div>
             homeworks 1
 
             {/*should work (должно работать)*/}
