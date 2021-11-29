@@ -1,0 +1,34 @@
+.navContainer {
+    background-color: #acc6d9;
+    min-height: 80px;
+}
+
+.navContainer a {
+    display: inline-block;
+    padding-top: 10px;
+    text-align: center;
+
+    text-decoration: none;
+    color: #f6f1f1;
+
+    font-size: larger;
+}
+
+.navContainer button {
+    display: inline-block;
+    background: #699cc0;
+    padding: 10px 15px;
+    border-radius: 50%;
+
+    border: none;
+}
+
+button:hover {
+    background-color: #536672;
+    cursor: grabbing;
+}
+
+
+button:active {
+    background-color: transparent;
+}

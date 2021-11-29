@@ -10,7 +10,6 @@ import Error404 from "../../../p2-homeworks/h5/pages/Error404";
 function App() {
     return (
         <div className={s.App}>
-            <div>react homeworks:</div>
             {/*<HW1/>*/}
             {/*<HW2/>*/}
             {/*<HW3/>*/}

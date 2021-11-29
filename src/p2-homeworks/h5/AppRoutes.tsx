@@ -4,6 +4,7 @@ import {Route, Routes} from "react-router-dom";
 import PreJunior from "./pages/PreJunior";
 import Junior from "./pages/Junior";
 import JuniorPlus from "./pages/JuniorPlus";
+import s from "../../p1-main/m1-ui/u1-app/App.module.css";
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
@@ -13,7 +14,7 @@ export const PATH = {
 
 function AppRoutes() {
     return (
-        <div>
+        <div className={s.innerContainer}>
             {/*Switch выбирает первый подходящий роут*/}
             <Routes>
 

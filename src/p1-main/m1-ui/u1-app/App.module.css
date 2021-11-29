@@ -1,4 +1,7 @@
 .App {
 background-color: #46494b;
-    padding: 20px;
+}
+
+.innerContainer {
+    padding: 40px;
 }

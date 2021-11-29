@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import SenseiAffairs from './SenseiAffairs/SenseiAffairs'
 import Affairs from "./Affairs";
-import "../../Btn.css"
+import "../../Btn.module.css"
 import ExampleButton from "../../common/ExampleButton/ExampleButton";
 
 // types

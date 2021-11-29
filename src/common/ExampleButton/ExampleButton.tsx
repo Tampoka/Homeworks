@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import s from '../../Btn.module.css'
 
 export type ExampleButtonPropsType = {
     componentToShowAfter?:React.ReactNode
@@ -11,7 +12,7 @@ const ExampleButton:React.FC<ExampleButtonPropsType> = (props) => {
     const buttonText = !showExample ? "Compare" : "Hide"
     return (
         <div>
-            <button onClick={togglingExample} className="glowBtn">{buttonText}</button>
+            <button onClick={togglingExample} className={s.glowBtn}>{buttonText}</button>
             <div>
                 {showExample&&
                 props.componentToShowAfter}

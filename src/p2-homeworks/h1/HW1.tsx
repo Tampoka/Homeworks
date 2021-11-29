@@ -1,7 +1,6 @@
 import React from 'react'
 import Message, {MessageTypeProps} from "./Message";
 import SenseiMessage from "./SenseiMessage/SenseiMessage";
-import "../../Btn.css"
 import ExampleButton from "../../common/ExampleButton/ExampleButton";
 
 const messageData: MessageTypeProps = {
@@ -20,7 +19,6 @@ const messageData2: MessageTypeProps = {
 function HW1() {
     return (
         <div>
-            <hr/>
             homeworks 1
 
             {/*should work (должно работать)*/}
