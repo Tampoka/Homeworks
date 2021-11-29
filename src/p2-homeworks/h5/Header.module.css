@@ -1,6 +1,22 @@
-.navContainer {
+.header {
     background-color: #acc6d9;
     min-height: 80px;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 500px;
+    position: relative;
+    left: -400px;
+    transition: left .4s ease;
+
+}
+
+.navContainer.visible {
+    transition: left .4s ease;
+    left: 0;
 }
 
 .navContainer a {
@@ -21,6 +37,7 @@
     border-radius: 50%;
 
     border: none;
+    margin-left: 20px;
 }
 
 button:hover {
