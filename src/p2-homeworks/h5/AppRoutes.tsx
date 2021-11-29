@@ -2,6 +2,8 @@ import React from 'react'
 import Error404 from "./pages/Error404";
 import {Route, Routes} from "react-router-dom";
 import PreJunior from "./pages/PreJunior";
+import Junior from "./pages/Junior";
+import JuniorPlus from "./pages/JuniorPlus";
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
@@ -19,8 +21,8 @@ function AppRoutes() {
                 {/*exact нужен чтоб указать полное совподение (что после '/' ничего не будет)*/}
                 <Route path='/' element={<PreJunior/>}/>
 
-                {/*<Route path={PATH.JUNIOR} element={<Junior/>}/>*/}
-                {/*    <Route path={PATH.JUNIOR} element={<JuniorPlus/>}/>*/}
+                <Route path={PATH.JUNIOR} element={<Junior/>}/>
+                    <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
 
                 {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
                 <Route path="*" element={<Error404/>}/>
