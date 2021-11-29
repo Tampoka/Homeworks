@@ -17,24 +17,12 @@ function HW3() {
         setUsers([...users, {name, _id: v1()}]) // need to fix
     }
 
-    const [showExample, setShowExample] = useState<boolean>(false)
-    const togglingExample = () => {
-        !showExample ? setShowExample(true) : setShowExample(false)
-    }
-    const buttonText = !showExample ? "Compare" : "Hide"
     return (
         <div>
             homeworks 3
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>
-
-            <button onClick={togglingExample} className="glowBtn">{buttonText}</button>
-
-            {showExample &&
-            <SenseiGreetingContainer users={users} addUserCallback={addUserCallback}/>}
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeGreeting/>*/}
         </div>
     )
 }
