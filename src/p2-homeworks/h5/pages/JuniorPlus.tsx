@@ -1,9 +1,10 @@
 import React from 'react';
+import s from './Uncomplete.module.css'
 
 const JuniorPlus = () => {
     return (
-        <div>
-            We are working on it...
+        <div className={s.container}>
+            <div>I am  working on it...</div>
         </div>
     );
 };

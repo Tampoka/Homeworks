@@ -19,6 +19,7 @@ function HW3() {
 
     return (
         <div>
+            <hr/>
             homeworks 3
 
             {/*should work (должно работать)*/}
