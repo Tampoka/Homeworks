@@ -3,6 +3,7 @@
 
     color: white;
     margin: 10px 0;
+    font-size: larger;
 }
 
 .editableSpan:before {
@@ -12,4 +13,6 @@
     padding-right: 3px;
     vertical-align: middle;
     font-weight: 900;
+    color: black;
+    margin-right: 5px;
 }

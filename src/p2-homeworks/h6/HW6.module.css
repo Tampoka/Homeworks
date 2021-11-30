@@ -10,7 +10,7 @@
 }
 
 .animated {
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
     -webkit-animation: glow 2s ease-in-out infinite alternate;
     -moz-animation: glow 2s ease-in-out infinite alternate;
