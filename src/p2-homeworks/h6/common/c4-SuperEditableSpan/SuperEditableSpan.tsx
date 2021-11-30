@@ -1,5 +1,6 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from 'react'
 import SuperInputText from '../../../h4/common/c1-SuperInputText/SuperInputText'
+import s from './SuperEditableSpan.module.css'
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -23,6 +24,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         onBlur,
         onEnter,
         spanProps,
+        spanClassName,
 
         ...restProps// все остальные пропсы попадут в объект restProps
     }
@@ -31,22 +33,22 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {}
 
     const onEnterCallback = () => {
-        // setEditMode() // выключить editMode при нажатии Enter
+        setEditMode(false) // выключить editMode при нажатии Enter
 
         onEnter && onEnter()
     }
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
-        // setEditMode() // выключить editMode при нажатии за пределами инпута
+        setEditMode(false) // выключить editMode при нажатии за пределами инпута
 
         onBlur && onBlur(e)
     }
     const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-        // setEditMode() // включить editMode при двойном клике
+        setEditMode(true) // включить editMode при двойном клике
 
         onDoubleClick && onDoubleClick(e)
     }
 
-    const spanClassName = `${'сделать красивый стиль для спана'} ${className}`
+    const setSpanClassName = `${s.editableSpan} ${spanClassName} ${className}`
 
     return (
         <>
@@ -62,7 +64,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                 ) : (
                     <span
                         onDoubleClick={onDoubleClickCallBack}
-                        className={spanClassName}
+                        className={setSpanClassName}
 
                         {...restSpanProps}
                     >

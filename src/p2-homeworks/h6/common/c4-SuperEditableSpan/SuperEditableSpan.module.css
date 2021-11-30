@@ -1,0 +1,15 @@
+.editableSpan {
+    display: inline-block;
+
+    color: white;
+    margin: 10px 0;
+}
+
+.editableSpan:before {
+    font-family: "Font Awesome 6 Free", serif;
+    content: "\f044";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
