@@ -15,12 +15,8 @@
     outline: #a58baf solid 1px;
 }
 
-.button:active {
-    background: #a58baf;
-}
-
-.active {
-    background: #135404;
+.button.active {
+    background: #48b6c5;
 }
 
 .affair {
