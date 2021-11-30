@@ -38,6 +38,8 @@
 
     border: none;
     margin-left: 20px;
+    color: white;
+    font-size: larger;
 }
 
 .navContainer button:hover {
