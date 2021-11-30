@@ -27,4 +27,7 @@
 
 .count {
     margin: 10px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
 }

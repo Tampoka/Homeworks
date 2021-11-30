@@ -1,14 +1,15 @@
 .affairsContainer {
 }
-.button {
-    margin: 10px;
-    width: 60px;
 
-    background: #49495b;
-    color: #99ff99;
-    outline: none;
-    border-radius: 8px;
-}
+/*.button {*/
+/*    margin: 10px;*/
+/*    width: 60px;*/
+
+/*    background: #49495b;*/
+/*    color: #99ff99;*/
+/*    outline: none;*/
+/*    border-radius: 8px;*/
+/*}*/
 
 .button:focus {
     outline: #a58baf solid 1px;
@@ -19,7 +20,7 @@
 }
 
 .active {
-    background: #81478c;
+    background: #135404;
 }
 
 .affair {
@@ -27,7 +28,13 @@
     align-items: center;
 }
 
+.affair .deleteBtn {
+    padding: 6px;
+    border-radius: 0;
+}
+
 .item {
+    font-size: larger;
     padding-left: 5px;
 }
 

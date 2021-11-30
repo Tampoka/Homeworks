@@ -2,6 +2,7 @@ import React, {Dispatch, SetStateAction} from 'react'
 import {AffairType, FilterType} from './HW2'
 import s from './Affairs.module.css'
 import Affair from "./Affair";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = {
     data: AffairType[]
@@ -20,27 +21,28 @@ function Affairs(props: AffairsPropsType) {
         />
     ))
 
-    const setAll = () => {
-        props.setFilter('all')
-    } //
-    const setHigh = () => {
-        props.setFilter('high')
-    }
-    const setMiddle = () => {
-        props.setFilter('middle')
-    }
-    const setLow = () => {
-        props.setFilter('low')
-    }
+    // const setAll = () => {
+    //     props.setFilter('all')
+    // } //
+    // const setHigh = () => {
+    //     props.setFilter('high')
+    // }
+    // const setMiddle = () => {
+    //     props.setFilter('middle')
+    // }
+    // const setLow = () => {
+    //     props.setFilter('low')
+    // }
 
     const set = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         props.setFilter(e.currentTarget.value as FilterType)
     }
 
-    const cnAll = s.button + ' ' + (props.filter === 'all' ? s.active : '')
-    const cnHigh = s.button + ' ' + (props.filter === 'high' ? s.active : '')
-    const cnMiddle = s.button + ' ' + (props.filter === 'middle' ? s.active : '')
-    const cnLow = s.button + ' ' + (props.filter === 'low' ? s.active : '')
+    // const cnAll = s.button + ' ' + (props.filter === 'all' ? s.active : '')
+    // const cnHigh = s.button + ' ' + (props.filter === 'high' ? s.active : '')
+    // const cnMiddle = s.button + ' ' + (props.filter === 'middle' ? s.active : '')
+    // const cnLow = s.button + ' ' + (props.filter === 'low' ? s.active : '')
+    //
     const setClass = (filter: FilterType) => {
         return s.button + (props.filter === filter ? ' ' + s.active : '')
     }
@@ -49,15 +51,20 @@ function Affairs(props: AffairsPropsType) {
 
             {mappedAffairs}
 
-            <button onClick={setAll} className={cnAll}>All</button>
-            <button onClick={setHigh} className={cnHigh}>High</button>
-            <button onClick={setMiddle} className={cnMiddle}>Middle</button>
-            <button onClick={setLow} className={cnLow}>Low</button>
+            {/*<button onClick={setAll} className={cnAll}>All</button>*/}
+            {/*<button onClick={setHigh} className={cnHigh}>High</button>*/}
+            {/*<button onClick={setMiddle} className={cnMiddle}>Middle</button>*/}
+            {/*<button onClick={setLow} className={cnLow}>Low</button>*/}
 
-            {/*<button onClick={set} className={setClass('all')} value={'all'}>All</button>
-            <button onClick={set} className={setClass('high')} value={'high'}>High</button>
-            <button onClick={set} className={setClass('middle')} value={'middle'}>Middle</button>
-            <button onClick={set} className={setClass('low')} value={'low'}>Low</button>*/}
+            {/*<button onClick={set} className={setClass('all')} value={'all'}>All</button>*/}
+            {/*<button onClick={set} className={setClass('high')} value={'high'}>High</button>*/}
+            {/*<button onClick={set} className={setClass('middle')} value={'middle'}>Middle</button>*/}
+            {/*<button onClick={set} className={setClass('low')} value={'low'}>Low</button>*/}
+
+            <SuperButton onClick={set} className={setClass('all')} value={'all'}>All</SuperButton>
+            <SuperButton onClick={set} className={setClass('high')} value={'high'}>High</SuperButton>
+            <SuperButton onClick={set} className={setClass('middle')} value={'middle'}>Middle</SuperButton>
+            <SuperButton onClick={set} className={setClass('low')} value={'low'}>Low</SuperButton>
 
         </div>
     )
