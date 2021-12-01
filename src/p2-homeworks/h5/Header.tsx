@@ -16,7 +16,7 @@ function Header() {
                 <CustomLink className={style.glowBtn} to={PATH.JUNIOR}>Junior</CustomLink>
                 <CustomLink className={style.glowBtn} to={PATH.JUNIOR_PLUS}>Junior+</CustomLink>
                 <div>
-                    <button onClick={toggleShowNav}>?</button>
+                    <button onClick={toggleShowNav}><i className="fas fa-mouse"></i></button>
                 </div>
             </div>
         </div>

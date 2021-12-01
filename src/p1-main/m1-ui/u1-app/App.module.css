@@ -1,5 +1,6 @@
 .App {
 background-color: #46494b;
+    min-height: 100vh;
 }
 
 /*.innerContainer {*/
