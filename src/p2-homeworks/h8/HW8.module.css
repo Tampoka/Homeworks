@@ -1,0 +1,15 @@
+.user {
+    width: 200px;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #fff;
+
+}
+
+.user span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
