@@ -17,6 +17,7 @@ function HW7() {
                     options={arr}
                     value={value}
                     onChangeOption={onChangeOption}
+                    label="-Choose from--"
                 />
             </div>
             <div>

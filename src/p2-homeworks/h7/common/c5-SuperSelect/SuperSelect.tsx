@@ -4,24 +4,27 @@ import s from './SuperSelect.module.css'
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
-    options?: any[]
+    options?: string[]
     onChangeOption?: (option: any) => void
+    label?:string
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = (
     {
         options,
         onChange, onChangeOption,
+        label,
         ...restProps
     }
 ) => {
 
-    const mappedOptions: JSX.Element[] = options ? options.map((o, index) => {
+    const mappedOptions: JSX.Element[] = options ? options.map((o, i) => {
         return (
             <option
                 className={s.option}
-                key={index}
-                value={o}>
+                key={i}
+                value={o}
+            >
                 {o}
             </option>)
     }) : []// map options with key
@@ -35,7 +38,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
 
     return (
         <div className={s.selectContainer}>
-            <label className={s.selectLabel}>--Choose from--</label>
+            {label&&<label className={s.selectLabel}>{label}</label>}
             <select onChange={onChangeCallback}
                     {...restProps}
                 className={s.select}
