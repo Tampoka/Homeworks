@@ -13,6 +13,8 @@ function HW6() {
     const restore = () => {
         const valueFromLocalStorage = restoreState('editable-span-value', '')
         setValue(valueFromLocalStorage)// setValue()
+
+        // setValue(restoreState('editable-span-value', '')) without redundant variable
     }
 
     return (
