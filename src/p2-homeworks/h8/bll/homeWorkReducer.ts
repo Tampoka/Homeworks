@@ -1,6 +1,11 @@
 import {UserType} from "../HW8";
 
-export const homeWorkReducer = (state: UserType[], action: any): UserType[] => { // need to fix any
+type ActionType = {
+    type: string
+    payload: string | number
+}
+
+export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => { // need to fix any
     switch (action.type) {
         case 'sort': {
           if (action.payload==='up') {
