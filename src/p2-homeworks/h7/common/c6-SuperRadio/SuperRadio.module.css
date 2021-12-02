@@ -9,7 +9,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 3px solid #ce9e8f;
+    border: 3px solid #e7dfdc;
     background: #fff;
     cursor: pointer;
     user-select: none;
@@ -25,7 +25,7 @@
     height: 15px;
     background-color: #3928b4;
     border-radius: 50%;
-    border: 3px solid #ce9e8f;
+    border: 3px solid #e7dfdc;
     user-select: none;
     cursor: pointer;
     margin-left: 10px;
@@ -34,4 +34,6 @@
 
 label {
     color: #99ff99;
+    font-size: larger;
 }
+
