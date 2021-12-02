@@ -12,7 +12,7 @@ function HW7() {
             homeworks 7
 
             {/*should work (должно работать)*/}
-            <div style={{margin:50}}>
+            <div>
                 <SuperSelect
                     options={arr}
                     value={value}

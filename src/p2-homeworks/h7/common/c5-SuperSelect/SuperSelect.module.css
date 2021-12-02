@@ -1,5 +1,20 @@
-.optionsList {
-    padding: 10px;
-    margin: 10px;
+.selectContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
+.selectLabel {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: larger;
+}
+
+.select {
+    min-width: 200px;
+    background-color: #3928b4;
+    padding: 8px;
+    color: #99ff99;
+    font-size: larger;
+    border-radius: 8px;
+}

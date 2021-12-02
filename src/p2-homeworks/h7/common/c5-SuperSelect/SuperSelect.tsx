@@ -16,7 +16,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
     }
 ) => {
 
-    const mappedOptions: JSX.Element[] = options ? options.map((o ,index)=> {
+    const mappedOptions: JSX.Element[] = options ? options.map((o, index) => {
         return (
             <option
                 className={s.option}
@@ -34,9 +34,14 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
     }
 
     return (
-        <select onChange={onChangeCallback} {...restProps}>
+        <div className={s.selectContainer}>
+            <label className={s.selectLabel}>--Choose from--</label>
+            <select onChange={onChangeCallback}
+                    {...restProps}
+                className={s.select}
+            >
                 {mappedOptions}
-        </select>
+            </select></div>
     )
 }
 
