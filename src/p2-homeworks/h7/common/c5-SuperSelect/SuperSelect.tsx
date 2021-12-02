@@ -13,6 +13,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
     {
         options,
         onChange, onChangeOption,
+        className,
         label,
         ...restProps
     }
@@ -22,7 +23,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
         return (
             <option
                 className={s.option}
-                key={i}
+                key={o+' '+i}
                 value={o}
             >
                 {o}
@@ -36,12 +37,14 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
         // onChange, onChangeOption
     }
 
+    const finalSelectClassName=s.select+(className?' '+className:'')
+
     return (
         <div className={s.selectContainer}>
             {label&&<label className={s.selectLabel}>{label}</label>}
             <select onChange={onChangeCallback}
                     {...restProps}
-                className={s.select}
+                className={finalSelectClassName}
             >
                 {mappedOptions}
             </select></div>
