@@ -1,0 +1,48 @@
+.clock {
+    width: 300px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer {
+    width: 150px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 40px;
+    line-height: 50px;
+
+    border: 3px solid rgba(141, 141, 164, 0.32);
+    border-radius: 8px;
+    text-align: center;
+    color: #99ff99;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.date {
+    color: #99ff99;
+}
+
+.animated {
+    font-size: 25px;
+    text-align: center;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        color: #99ff99;
+        text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+    }
+
+    to {
+        color: #000000;
+        text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2;
+    }
+}
