@@ -7,25 +7,26 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        clearInterval(timerId)
     }
     const start = () => {
         stop()
-        const id: number = window.setInterval(() => {
-            // setDate
+        const id: number = +setInterval(() => {
+            // const id: number = window.setInterval(() => {
+            setDate(new Date())// setDate
         }, 1000)
         setTimerId(id)
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)// show
     }
     const onMouseLeave = () => {
-        // close
+        setShow(false)// close
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const stringTime = date?.toLocaleTimeString() || <br/>// fix with date // adding empty div(stroke) in case there is no date, for page not to shrink
+    const stringDate = date?.toLocaleDateString() || <br/> // fix with date
 
     return (
         <div>
@@ -36,11 +37,12 @@ function Clock() {
                 {stringTime}
             </div>
 
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
+            {show ? (
+                    <div>
+                        {stringDate}
+                    </div>
+                )
+                : (<br/>)}
 
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>

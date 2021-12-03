@@ -1,10 +1,13 @@
+.usersContainer {
+    min-height: 150px;
+}
+
 .user {
     width: 200px;
     margin-top: 10px;
 
     display: flex;
     justify-content: space-between;
-
     color: #fff;
 
 }

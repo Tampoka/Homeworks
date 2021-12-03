@@ -39,7 +39,7 @@ function HW8() {
             homeworks 8
 
             {/*should work (должно работать)*/}
-            {finalPeople}
+            <div className={s.usersContainer}>{finalPeople}</div>
 
             <SuperButton onClick={sortUp} >sort up</SuperButton>
             <SuperButton onClick={sortDown}>sort down</SuperButton>
@@ -47,7 +47,6 @@ function HW8() {
 
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}
-            <hr/>
         </div>
     )
 }
