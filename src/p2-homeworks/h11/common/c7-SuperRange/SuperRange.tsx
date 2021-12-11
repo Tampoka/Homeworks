@@ -46,7 +46,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 
     // @ts-ignore
     return (
-        <Box sx={{width: 300}}>
+        <Box sx={{width: 300, padding: "10px 0px"}}>
             Range
             <Slider
                 getAriaLabel={() => 'Range'}

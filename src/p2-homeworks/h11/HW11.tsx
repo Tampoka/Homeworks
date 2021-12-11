@@ -18,12 +18,12 @@ function HW11() {
     // const [range, setRange] = useState<(number | number[])>([value1, value2]);
 
     return (
-        <div className={s.rangeContainer}>
+        <div>
             <hr/>
             homeworks 11
 
             {/*should work (должно работать)*/}
-            <div>
+            <div className={s.rangeContainer}>
                 <span>{value1}</span>
                 <SuperRange
                     // сделать так чтоб value1 изменялось
@@ -32,7 +32,7 @@ function HW11() {
                 />
             </div>
 
-            <div>
+            <div className={s.rangeContainer}>
                 <span>{value1}</span>
                 <SuperDoubleRange
                     onChangeRange={onDoubleRangeChange}

@@ -27,7 +27,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({value, onChangeR
         onChangeRange(newValue as any)
     };
     return (
-        <Box sx={{width: 300}}>
+        <Box sx={{width: 300, padding: "10px 0px"}}>
             DoubleRange
             <Slider
                 value={value}
@@ -35,6 +35,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({value, onChangeR
                 onChange={handleChange}
                 valueLabelDisplay="on"
                 marks={marks}
+                color="primary"
             />
         </Box>
     )
