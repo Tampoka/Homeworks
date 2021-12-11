@@ -1,32 +1,41 @@
-import React, {Dispatch, SetStateAction} from 'react'
+import React from 'react'
 import {Box, Slider} from "@mui/material";
 
 type SuperDoubleRangePropsType = {
     value?: number | number[]
-    // getAriaLabel: () => void
-    valueLabelDisplay: string
-    setRange:Dispatch<SetStateAction<number | number[]>>
+    onChangeRange: (values: [number, number]) => void
 }
 
-const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({value,valueLabelDisplay,setRange,...restProps}
-        // onChangeRange, value,
-        // min, max, step, disable, ...
+const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({value, onChangeRange, ...restProps}
+                                                               // onChangeRange, value,
+                                                               // min, max, step, disable, ...
 ) => {
     // сделать самому, можно подключать библиотеки
 
-    const handleChange = (event:Event, newValue:number | number[]) => {
-        setRange(newValue as any);
+    const marks = [
+        {
+            value: 0,
+            label: '0'
+        },
+        {
+            value: 100,
+            label: '100'
+        },
+    ]
+
+    const handleChange = (event: Event, newValue: number | number[]) => {
+        onChangeRange(newValue as any)
     };
     return (
         <Box sx={{width: 300}}>
             DoubleRange
             <Slider
-                getAriaLabel={() => 'DoubleRange'}
                 value={value}
+                step={10}
                 onChange={handleChange}
-                valueLabelDisplay="auto"
-                // getAriaValueText={valuetext}
-             />
+                valueLabelDisplay="on"
+                marks={marks}
+            />
         </Box>
     )
 }
