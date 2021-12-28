@@ -11,7 +11,7 @@ const CustomLink = ({children, to, ...props}: LinkProps) => {
         <div>
             <Link to={to}
                   {...props}
-                  className={style.glowBtn + ' ' + (match ? s.active : "")}>
+                  className={style.glowBtn + ' ' + (match ? s.active : '')}>
                 {children}
             </Link>
         </div>

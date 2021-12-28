@@ -15,8 +15,6 @@ function HW11() {
         setValue2(values[1]);
     }
 
-    // const [range, setRange] = useState<(number | number[])>([value1, value2]);
-
     return (
         <div>
             <hr/>
