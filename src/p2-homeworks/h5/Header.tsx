@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {PATH} from './AppRoutes';
 import s from './Header.module.css'
-import style from '../../GlowBtn.module.css'
+import style from '../../common/common-styles/GlowBtn.module.css'
 import CustomLink from "./CustomLink";
 
 function Header() {

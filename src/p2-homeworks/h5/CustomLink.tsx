@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, LinkProps, useMatch, useResolvedPath} from 'react-router-dom';
 import s from './CustomLink.module.css'
-import style from '../../GlowBtn.module.css'
+import style from '../../common/common-styles/GlowBtn.module.css'
 
 const CustomLink = ({children, to, ...props}: LinkProps) => {
     let resolved = useResolvedPath(to);
