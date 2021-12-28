@@ -1,10 +1,12 @@
 import React from "react";
 import s from "./HW12.module.css";
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../h10/bll/store";
 
 const themes = ['dark', 'red', 'some'];
 
 function HW12() {
-    const theme = 'some'; // useSelector
+    const theme = useSelector<AppStoreType,string>(state=>state.theme.theme)
 
     // useDispatch, onChangeCallback
 
