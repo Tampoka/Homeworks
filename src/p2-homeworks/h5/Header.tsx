@@ -2,15 +2,19 @@ import React, {useState} from 'react'
 import {PATH} from './AppRoutes';
 import s from './Header.module.css'
 import style from '../../common/common-styles/GlowBtn.module.css'
+import styles from '../../common/common-styles/theme-options/theme-options.module.css'
 import CustomLink from "./CustomLink";
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../h10/bll/store";
 
 function Header() {
     const [showNav, setShowNav] = useState(false)
     const toggleShowNav = () => setShowNav(!showNav)
+    const theme = useSelector<AppStoreType, string>(state => state.theme.theme)
 
-    const navClass = s.navContainer + ' ' + (showNav ? s.visible : '')
+    const navClass = ` ${s.navContainer}   ${showNav ? s.visible : ''}`
     return (
-        <div className={s.header}>
+        <div className={`${s.header} ${styles[theme]}`}>
             <div className={navClass}>
                 <CustomLink className={style.glowBtn} to='/'>Pre-Junior</CustomLink>
                 <CustomLink className={style.glowBtn} to={PATH.JUNIOR}>Junior</CustomLink>

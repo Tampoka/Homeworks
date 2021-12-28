@@ -1,3 +1,11 @@
+.default {
+    background: #acc6d9;
+}
+
+.default-text {
+    color: #404549;
+}
+
 .dark {
     background: dimgrey;
 }
@@ -7,11 +15,11 @@
 }
 
 .light {
-    background-color: #acc6d9;
+    background-color: #d4e3cb;
 }
 
 .light-text {
-    color: #111111;
+    color: #063a0a;
 }
 
 .red {
@@ -22,10 +30,10 @@
     color: aqua;
 }
 
-.yellow {
+.light-green {
     background: lightgreen;
 }
 
-.yellow-text {
+.light-green-text {
     color: darkslateblue;
 }
