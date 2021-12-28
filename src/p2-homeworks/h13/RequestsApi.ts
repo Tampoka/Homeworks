@@ -4,7 +4,7 @@ export const requestAPI = (success: boolean) => {
     return axios.post<{ success: boolean }, ResponseType>('https://neko-cafe-back.herokuapp.com/auth/test', {success})
         .then(response => {
             console.log(response)
-            return response.data.errorText
+            return response.data.info
         })
         .catch(error => {
             console.log({...error});
