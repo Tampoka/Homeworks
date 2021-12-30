@@ -3,7 +3,7 @@ import {Box, Slider} from "@mui/material";
 
 type SuperDoubleRangePropsType = {
     value?: number | number[]
-    onChangeRange: (values: [number, number]) => void
+    onChangeRange?: (values: [number, number]) => void
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({value, onChangeRange, ...restProps}
@@ -24,7 +24,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({value, onChangeR
     ]
 
     const handleChange = (event: Event, newValue: number | number[]) => {
-        onChangeRange(newValue as any)
+        onChangeRange&&onChangeRange(newValue as any)
     };
     return (
         <Box sx={{width: 300, padding: "10px 0px"}}>

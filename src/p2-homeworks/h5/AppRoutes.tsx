@@ -15,9 +15,7 @@ export const PATH = {
 function AppRoutes() {
     return (
         <div className={s.innerContainer}>
-            {/*Switch выбирает первый подходящий роут*/}
             <Routes>
-
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу PRE_JUNIOR*/}
                 {/*exact нужен чтоб указать полное совподение (что после '/' ничего не будет)*/}
                 <Route path="/" element={<Navigate replace to={PATH.PRE_JUNIOR} />}/>

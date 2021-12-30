@@ -9,7 +9,7 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     value: number
-    onChangeRange: (newValue: number) => void
+    onChangeRange?: (newValue: number) => void
 };
 
 const SuperRange: React.FC<SuperRangePropsType> = (
@@ -29,7 +29,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         }*/
 
     const handleChange = (event: Event, newValue: number | number[]) => {
-        onChangeRange(newValue as any);
+        onChangeRange&&onChangeRange(newValue as any);
     };
 
     const marks = [
