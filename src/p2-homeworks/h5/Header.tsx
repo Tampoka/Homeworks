@@ -8,8 +8,8 @@ import {useSelector} from "react-redux";
 import {AppStoreType} from "../h10/bll/store";
 
 function Header() {
-    const [showNav, setShowNav] = useState(false)
-    const toggleShowNav = () => setShowNav(!showNav)
+    const [showNav, setShowNav] = useState(true)
+    const toggleShowNav = () => setShowNav(prev=>!showNav)
     const theme = useSelector<AppStoreType, string>(state => state.theme.theme)
 
     const navClass = ` ${s.navContainer}   ${showNav ? s.visible : ''}`
